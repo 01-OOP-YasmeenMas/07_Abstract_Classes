@@ -5,8 +5,8 @@ public class App {
     public static void main(String[] args) {
      
         Rectangle rectangle = new Rectangle(10.0, 10.0);
-        Circle circle = new Circle(2.0);
-        Triangle triangle = new Triangle(4.0, 5.0 );
+        Circle circle = new Circle(5.0);
+        Triangle triangle = new Triangle(10.0, 10.0 );
 
         rectangle.area();
         circle.area();
@@ -16,6 +16,27 @@ public class App {
         output("Fläche Rechteck: " + rectangle.area());
         output("Fläche Kreis: " + circle.area());
         output("Fläche Dreieck: " + triangle.area());
+
+
+        
+    // 1.Iteration:  ggf. 1000x überladen ... 
+    // private static double areaDiff(Circle c, Rectangle r) {
+    //     return c.area() - r.area();
+    // }
+
+    private static double areaDiff(Circle c, Rectangle r) {
+        return c.area() - r.area();
+    }
+
+    private static double areaDiff(Rectangle r, Triangle t) {
+        return r.area() - t.area();
+    }
+
+    private static double areaDiff(Rectangle r, Circle c) {
+        return r.area() - c.area();
+  
+
+
 
        
     }
